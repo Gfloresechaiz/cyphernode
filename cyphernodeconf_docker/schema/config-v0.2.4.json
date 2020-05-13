@@ -164,7 +164,7 @@
           "otsclient_datapath"
         ]
       }
-    }
+    },
     {
       "if": {
         "properties": {
