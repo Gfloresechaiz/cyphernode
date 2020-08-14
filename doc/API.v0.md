@@ -313,6 +313,7 @@ Proxy response:
   "minrelaytxfee": 1e-05
 }
 ```
+
 ## Get the unspent transaction output set statistics
 
 Returns statistics about the unspent transaction output set.
@@ -334,6 +335,62 @@ Proxy response:
   "hash_serialized_2": "ffc1fb007587596f9183154a613843e5b55b1d285b16d7e3b0cb7cbe6b2cba06",
   "disk_size" : 23647567017, 
   "total_amount": 20941947.16577759,
+}
+```
+
+## Get the P2P network info
+
+Returns an object containing various state info regarding P2P networking.
+
+```http
+GET http://cyphernode:8888/getnetworkinfo
+```
+
+Proxy response:
+
+```json
+{
+  "version": 190100,
+  "subversion": "/Satoshi:0.19.1/",
+  "protocolversion": 70015,
+  "localservices": "0000000000000409",
+  "localservicesnames": [
+    "NETWORK",
+    "WITNESS",
+    "NETWORK_LIMITED"
+  ],
+  "localrelay": true,
+  "timeoffset": 0,
+  "networkactive": true,
+  "connections": 10,
+  "networks": [
+    {
+      "name": "ipv4",
+      "limited": false,
+      "reachable": true,
+      "proxy": "",
+      "proxy_randomize_credentials": false
+    },
+    {
+      "name": "ipv6",
+      "limited": false,
+      "reachable": true,
+      "proxy": "",
+      "proxy_randomize_credentials": false
+    },
+    {
+      "name": "onion",
+      "limited": false,
+      "reachable": true,
+      "proxy": "172.22.0.4:9050",
+      "proxy_randomize_credentials": true
+    }
+  ],
+  "relayfee": 0.00001000,
+  "incrementalfee": 0.00001000,
+  "localaddresses": [
+  ],
+  "warnings": "Warning: unknown new rules activated (versionbit 28)"
 }
 ```
 

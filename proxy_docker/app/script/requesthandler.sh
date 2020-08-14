@@ -224,6 +224,13 @@ main() {
           response_to_client "${response}" ${?}
           break
           ;;
+        getnetworkinfo)
+          # http://192.168.111.152:8080/getnetworkinfo
+
+          response=$(getnetworkinfo)
+          response_to_client "${response}" ${?}
+          break
+          ;;
         gettransaction)
           # curl (GET) http://192.168.111.152:8080/gettransaction/af867c86000da76df7ddb1054b273ca9e034e8c89d049b5b2795f9f590f67648
 

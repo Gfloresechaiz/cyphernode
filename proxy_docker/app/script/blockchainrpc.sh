@@ -111,3 +111,11 @@ gettxoutsetinfo() {
   send_to_watcher_node "${data}" | jq ".result"
   return $?
 }
+
+getnetworkinfo() {
+  trace "Entering getnetworkinfo()..."
+
+  local data='{"method":"getnetworkinfo"}'
+  send_to_watcher_node "${data}" | jq ".result"
+  return $?
+}
